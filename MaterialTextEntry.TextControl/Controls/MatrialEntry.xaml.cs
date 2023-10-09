@@ -27,6 +27,10 @@ public partial class MatrialEntry : ContentView
         var rd = App.Current.Resources.MergedDictionaries.First();
         _primary = (Color)rd["Primary"];
 
+        MEEntry.ZIndex = 2;
+        MEBorder.ZIndex = 2;
+        MELabel.ZIndex = 3;
+
         BindingContext = this;
     }
 
@@ -57,11 +61,13 @@ public partial class MatrialEntry : ContentView
     {
         MELabel.ScaleTo(0.8, 250, Easing.Linear);
         MELabel.TranslateTo(_xPos, _yPos, 250, Easing.Linear);
+        MELabel.ZIndex = 3;
     }
 
     private void ScaleLabelUp()
     {
         MELabel.ScaleTo(1, 250, Easing.Linear);
         MELabel.TranslateTo(0, 0, 250, Easing.Linear);
+        MELabel.ZIndex = 1;
     }
 }
