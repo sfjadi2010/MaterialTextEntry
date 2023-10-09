@@ -32,7 +32,7 @@
             <Border.Padding>
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="Android"
-                        Value="10, 10, 10, 10" />
+                        Value="10, 0, 10, 0" />
                 </OnPlatform>
             </Border.Padding>
             <controls:BorderlessEntry x:Name="MEEntry"
